@@ -1,0 +1,243 @@
+/* Estilos generales */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0d1117;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #c9d1d9;
+}
+
+h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 2px 2px #1f6feb;
+}
+
+/* Estilos para el contenedor principal */
+#app {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Estilos para las cartitas */
+.card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #58a6ff;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0 0 10px;
+    color: #8b949e;
+    font-size: 1rem;
+}
+
+.card small {
+    color: #6e7681;
+    font-style: italic;
+}
+
+/* Estilo para el modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #30363d;
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+}
+
+.modal input, .modal textarea, .modal button {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal button {
+    background-color: #238636;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #2ea043;
+}
+
+/* Fondo con temática lunar */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0d1117, #010409);
+    z-index: -1;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #f0f6fc, #0d1117);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(240, 246, 252, 0.5);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Estilos para inputs desplegables */
+.hidden-input {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: #1f6feb;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #161b22;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.dropdown-content input,
+.dropdown-content textarea {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.dropdown-content button {
+    background-color: #238636;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px auto;
+    display: block;
+    width: 90%;
+}
+
+.dropdown-content button:hover {
+    background-color: #2ea043;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Centrar textos y ajustar el botón de inicio de sesión */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.login-container h2 {
+    color: #58a6ff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    color: #c9d1d9;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.google-login-button {
+    background-color: #238636;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.google-login-button:hover {
+    background-color: #2ea043;
+}

@@ -1,0 +1,27 @@
+/* Estilos para la página principal (index.html) */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0d1117;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #c9d1d9;
+}
+
+h1 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-shadow: 2px 2px #1f6feb;
+}
+
+footer {
+    margin-top: 20px;
+    color: #6e7681;
+    font-size: 0.9rem;
+    text-align: center;
+}
