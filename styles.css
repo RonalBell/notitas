@@ -127,7 +127,8 @@ body {
 .header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Esto hace que los hijos se apilen verticalmente */
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.1);
@@ -135,6 +136,13 @@ body {
     padding: 20px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header p {
+    text-align: center;
+    color: var(--text-color);
+    text-shadow: 0 0 10px rgba(168, 192, 255, 0.5);
+    padding-bottom: 20px;
 }
 
 .header h1 {
