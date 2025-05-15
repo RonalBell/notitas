@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas Lunares</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/ui.css">
+    <title>Notitas de Luna</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>🌙 Notas Lunares</h1>
-        <p>Bienvenido a un espacio donde tus pensamientos brillan como la luna.</p>
-    </header>
+    <!-- Elementos espaciales -->
+    <div class="stars" id="stars"></div>
+    <div class="moon"></div>
 
-    <main id="app">
-        <!-- Aquí se renderizarán las notas y formularios dinámicamente -->
-    </main>
+    <div class="container">
+        <!-- Vista de Login -->
+        <div id="loginView" class="view">
+            <div class="login-container">
+                <h1>Notitas de Luna</h1>
+                <p>Comparte tus sentimientos de una manera especial</p>
+                <button id="googleLogin" class="login-btn">
+                    <i class="fab fa-google"></i> Iniciar sesión con Google
+                </button>
+            </div>
+        </div>
 
-    <footer>
-        <p>Creado con 💖 bajo la luz de la luna.</p>
-    </footer>
+        <!-- Vista de Notas -->
+        <div id="notesView" class="view hidden">
+            <div class="header">
+                <h1>Para mí Luna</h1>
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                </button>
+            </div>
+            
+            <div class="notes-container">
+                <div id="notesList" class="notes-list">
+                    <!-- Las notas se agregarán dinámicamente aquí -->
+                </div>
+                
+                <div id="addNoteForm" class="add-note-form">
+                    <textarea id="noteContent" placeholder="Escribe tu nota de amor aquí..."></textarea>
+                    <button id="addNoteBtn" class="add-note-btn">
+                        <i class="fas fa-heart"></i> Agregar Nota
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script type="module" src="views/ui.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+    
+    <!-- Configuración de Firebase -->
+    <script src="firebase-config.js"></script>
+    <!-- Script principal -->
+    <script src="app.js"></script>
+    <!-- Script para las estrellas -->
+    <script src="stars.js"></script>
+    <!-- Script para las notificaciones -->
+    <script src="notifications.js"></script>
 </body>
-</html>
+</html> 

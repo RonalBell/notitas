@@ -1,6 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
-
-// Configuración de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyDnk37eZ1UL_GS437343mB4LYYhqoh01pk",
     authDomain: "notitas-16a1e.firebaseapp.com",
@@ -12,5 +9,8 @@ const firebaseConfig = {
 };
 
 // Inicializar Firebase
-const app = initializeApp(firebaseConfig);
-export default app;
+firebase.initializeApp(firebaseConfig);
+
+// Referencias a los servicios
+const auth = firebase.auth();
+const db = firebase.firestore(); 
